@@ -1877,6 +1877,35 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TEOAG.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.10",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.10",
+          "Microsoft.EntityFrameworkCore.SqLite": "5.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.10",
+          "MySql.EntityFrameworkCore": "5.0.10",
+          "TEOAG.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TEOAG.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TEOAG.Data.dll": {}
+        }
+      },
+      "TEOAG.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/TEOAG.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TEOAG.Domain.dll": {}
+        }
       }
     }
   },
@@ -6650,6 +6679,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "TEOAG.Data/1.0.0": {
+      "type": "project",
+      "path": "../TEOAG.Data/TEOAG.Data.csproj",
+      "msbuildProject": "../TEOAG.Data/TEOAG.Data.csproj"
+    },
+    "TEOAG.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TEOAG.Domain/TEOAG.Domain.csproj",
+      "msbuildProject": "../TEOAG.Domain/TEOAG.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6660,7 +6699,9 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.10",
       "MySql.EntityFrameworkCore >= 5.0.10",
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "TEOAG.Data >= 1.0.0",
+      "TEOAG.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6696,7 +6737,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\eduar\\Desktop\\TEOAG2\\TEOAG2\\Back-End\\src\\TEOAG.Data\\TEOAG.Data.csproj": {
+              "projectPath": "C:\\Users\\eduar\\Desktop\\TEOAG2\\TEOAG2\\Back-End\\src\\TEOAG.Data\\TEOAG.Data.csproj"
+            },
+            "C:\\Users\\eduar\\Desktop\\TEOAG2\\TEOAG2\\Back-End\\src\\TEOAG.Domain\\TEOAG.Domain.csproj": {
+              "projectPath": "C:\\Users\\eduar\\Desktop\\TEOAG2\\TEOAG2\\Back-End\\src\\TEOAG.Domain\\TEOAG.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

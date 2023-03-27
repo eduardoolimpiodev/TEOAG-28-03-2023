@@ -1,0 +1,12 @@
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\bin\Debug\net5.0\TEOAG.Domain.deps.json
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\bin\Debug\net5.0\TEOAG.Domain.dll
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\bin\Debug\net5.0\ref\TEOAG.Domain.dll
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\bin\Debug\net5.0\TEOAG.Domain.pdb
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\TEOAG.Domain.csproj.AssemblyReference.cache
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\TEOAG.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\TEOAG.Domain.AssemblyInfoInputs.cache
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\TEOAG.Domain.AssemblyInfo.cs
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\TEOAG.Domain.csproj.CoreCompileInputs.cache
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\TEOAG.Domain.dll
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\ref\TEOAG.Domain.dll
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.Domain\obj\Debug\net5.0\TEOAG.Domain.pdb

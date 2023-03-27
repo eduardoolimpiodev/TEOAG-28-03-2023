@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TEOAG.API.Data;
+using TEOAG.Data.Context;
 
-namespace TEOAG.API.Data.Migrations
+namespace TEOAG.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230327001646_One")]
-    partial class One
+    [Migration("20230327175605_Initials")]
+    partial class Initials
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace TEOAG.API.Data.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.10");
 
-            modelBuilder.Entity("TEOAG.API.Models.Product", b =>
+            modelBuilder.Entity("TEOAG.Domain.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,6 +34,7 @@ namespace TEOAG.API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProductDescription")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProductName")

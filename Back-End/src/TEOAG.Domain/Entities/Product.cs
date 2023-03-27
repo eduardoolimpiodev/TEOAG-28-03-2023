@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
-namespace TEOAG.API.Models
+namespace TEOAG.Domain.Entities
 {
     public class Product
     {
@@ -33,12 +33,22 @@ namespace TEOAG.API.Models
         [JsonPropertyName("CNPJ Supplier")]
         public string CNPJSupplier { get; set; }
 
-        public Product() { }
+        public Product() => ManufacturingDate = DateTime.Now;
 
-        public Product(int id)
+        public Product(int id, string productName, string supplierDescription) : this()
+
         {
             Id =id;
+            ProductName = ProductName;
+            SupplierDescription = supplierDescription;
         }
 
+        public void Concluir()
+        {
+            if(ManufacturingDate == null)
+            ManufacturingDate = DateTime.Now;
+            else
+                throw new Exception($"Product já incluso em: {ManufacturingDate.ToString("dd/MM/yyyy hh:mm")}");
+        }
     }
 }

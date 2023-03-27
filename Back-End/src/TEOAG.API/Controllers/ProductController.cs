@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TEOAG.API.Data;
-using TEOAG.API.Models;
+using TEOAG.Data.Context;
+using TEOAG.Domain.Entities;
 
 namespace TEOAG.API.Controllers
 {

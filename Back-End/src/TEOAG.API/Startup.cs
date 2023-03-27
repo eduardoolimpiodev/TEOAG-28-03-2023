@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using TEOAG.API.Data;
+using TEOAG.Data.Context;
 using System.Text.Json.Serialization;
 
 namespace TEOAG.API

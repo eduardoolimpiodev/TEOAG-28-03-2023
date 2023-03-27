@@ -1,6 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10" />
+     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10" />
+     <PackageReference Include="Microsoft.EntityFrameworkCore.SqLite" Version="5.0.10" />
+     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TEOAG.Domain\TEOAG.Domain.csproj" />
   </ItemGroup>
 

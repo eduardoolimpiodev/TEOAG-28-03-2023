@@ -1,4 +1,4 @@
-namespace TEOAG.API.Models
+namespace TEOAG.Domain.Entities
 {
     public enum Status
     {

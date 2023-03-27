@@ -271,3 +271,7 @@ C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\obj\Debug\net5.0\TEO
 C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\obj\Debug\net5.0\ref\TEOAG.API.dll
 C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\obj\Debug\net5.0\TEOAG.API.pdb
 C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\obj\Debug\net5.0\TEOAG.API.genruntimeconfig.cache
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\bin\Debug\net5.0\TEOAG.Data.dll
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\bin\Debug\net5.0\TEOAG.Domain.dll
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\bin\Debug\net5.0\TEOAG.Data.pdb
+C:\Users\eduar\Desktop\TEOAG2\TEOAG2\Back-End\src\TEOAG.API\bin\Debug\net5.0\TEOAG.Domain.pdb
