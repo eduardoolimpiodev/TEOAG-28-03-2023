@@ -3,10 +3,10 @@ using TEOAG.Domain.Entities;
 
 namespace TEOAG.Domain.Interfaces.Repositories
 {
-    public interface IProductRepo
+    public interface IProductRepo : IGeneralRepo
     {
          Task<Product[]> PegaTodasAsync();
-         Task<Product> PegaPorIdAsync();
-         Task<Product> PegaPorTituloAsync();
+         Task<Product> PegaPorIdAsync(int id);
+         Task<Product> PegaPorTituloAsync(string productName);
     }
 }

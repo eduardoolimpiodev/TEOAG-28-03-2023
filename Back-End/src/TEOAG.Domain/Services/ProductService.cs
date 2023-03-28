@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using TEOAG.Domain.Entities;
 using TEOAG.Domain.Interfaces.Repositories;
@@ -8,41 +9,92 @@ namespace TEOAG.Domain.Services
     public class ProductService : IProductService
     {
         private readonly IProductRepo _productRepo;
-        private readonly IGeneralRepo _generalRepo;
-        public ProductService(IProductRepo productRepo, IGeneralRepo generalRepo)
+        public ProductService(IProductRepo productRepo)
         {
             _productRepo = productRepo;
-            _generalRepo = generalRepo;
         }
 
-        public Task<Product> AdicionarProduto(Product model)
+        public async Task<Product> AdicionarProduto(Product model)
         {
-            throw new System.NotImplementedException();
+            if(await _productRepo.PegaPorTituloAsync(model.ProductName) != null)
+                throw new Exception("Já existe um produto com esse nome");
+
+            if(await _productRepo.PegaPorIdAsync(model.Id) == null)
+            {
+                _productRepo.Adicionar(model);
+                if(await _productRepo.SalvarMudancasAsync())
+                    return model;
+            }     
+            return null;
+
         }
 
-        public Task<Product> AtualizarProduto(Product model)
+        public async Task<Product> AtualizarProduto(Product model)
         {
-            throw new System.NotImplementedException();
+            if(model.ManufacturingDate != null)
+            throw new Exception("Não de pode alterar produto já concluído.");
+
+             if(await _productRepo.PegaPorIdAsync(model.Id) == null)
+            {
+                _productRepo.Atualizar(model);
+                if(await _productRepo.SalvarMudancasAsync())
+                    return model;
+            }     
+
+            return null;
         }
 
-        public Task<bool> ConcluirProduto(Product model)
+        public async Task<bool> ConcluirProduto(Product model)
         {
-            throw new System.NotImplementedException();
+            if(model != null)
+            {
+                model.Concluir();
+                _productRepo.Atualizar<Product>(model);
+                return await _productRepo.SalvarMudancasAsync();
+            }
+            return false;
         }
 
-        public Task<bool> DeletarProduct(int productId)
+        public async Task<bool> DeletarProduct(int productId)
         {
-            throw new System.NotImplementedException();
+            var product = await _productRepo.PegaPorIdAsync(productId);
+            if(product == null) throw new Exception("Produto que tentou deletar não existe.");
+
+            _productRepo.Deletar(product); 
+            return await _productRepo.SalvarMudancasAsync();
+            
         }
 
-        public Task<Product> PegarProdutoPorIdAsync(int productId)
+        public async Task<Product> PegarProdutoPorIdAsync(int productId)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                 var product = await _productRepo.PegaPorIdAsync(productId);
+                 if(product == null) return null;
+
+                 return product;
+            }
+            catch (System.Exception ex)
+            {
+                
+                throw new Exception(ex.Message);
+            }
         }
 
-        public Task<Product[]> PegarTodosProdutosAsync()
+        public async Task<Product[]> PegarTodosProdutosAsync()
         {
-            throw new System.NotImplementedException();
+             try
+            {
+                 var products = await _productRepo.PegaTodasAsync();
+                 if(products == null) return null;
+
+                 return products;
+            }
+            catch (System.Exception ex)
+            {
+                
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

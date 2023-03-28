@@ -45,7 +45,7 @@ namespace TEOAG.API.Controllers
         [HttpPut("{id}")]
         public Product put(int id, Product product)
         {
-           if (product.Id != id) throw new Exception("Você está tentando atualizar o produto errado.");
+           if (product.Id == id) throw new Exception("Você está tentando atualizar o produto errado.");
 
             _context.Update(product);
             if(_context.SaveChanges() > 0 )
