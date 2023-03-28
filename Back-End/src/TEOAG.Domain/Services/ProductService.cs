@@ -16,7 +16,10 @@ namespace TEOAG.Domain.Services
 
         public async Task<Product> AdicionarProduto(Product model)
         {
-            if(await _productRepo.PegaPorTituloAsync(model.ProductName) != null)
+
+           
+
+            if (await _productRepo.PegaPorTituloAsync(model.ProductName) != null)
                 throw new Exception("Já existe um produto com esse nome");
 
             if(await _productRepo.PegaPorIdAsync(model.Id) == null)
@@ -31,10 +34,10 @@ namespace TEOAG.Domain.Services
 
         public async Task<Product> AtualizarProduto(Product model)
         {
-            if(model.ManufacturingDate != null)
+            if (model.ManufacturingDate != null)
             throw new Exception("Não de pode alterar produto já concluído.");
 
-             if(await _productRepo.PegaPorIdAsync(model.Id) == null)
+             if(await _productRepo.PegaPorIdAsync(model.Id) != null)
             {
                 _productRepo.Atualizar(model);
                 if(await _productRepo.SalvarMudancasAsync())
@@ -46,7 +49,7 @@ namespace TEOAG.Domain.Services
 
         public async Task<bool> ConcluirProduto(Product model)
         {
-            if(model != null)
+            if (model != null)
             {
                 model.Concluir();
                 _productRepo.Atualizar<Product>(model);

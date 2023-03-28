@@ -35,6 +35,11 @@ namespace TEOAG.API.Controllers
         [HttpPost]
         public IEnumerable<Product> post(Product product)
         {
+            if (product.ManufacturingDate >= product.ExpirationDate)
+            {
+                throw new Exception($" Você tentou adicionar um produto com data de fabricação maior do que a data de validade.");
+
+            }
             _context.Products.Add(product);
             if(_context.SaveChanges() > 0 )
                 return _context.Products;
@@ -45,13 +50,19 @@ namespace TEOAG.API.Controllers
         [HttpPut("{id}")]
         public Product put(int id, Product product)
         {
-           if (product.Id == id) throw new Exception("Você está tentando atualizar o produto errado.");
+            if (product.ManufacturingDate >= product.ExpirationDate)
+            {
+                throw new Exception($" Você tentou modificar um produto com data de fabricação maior do que a data de validade, id do produto : {id}");
+
+            }
+            if (product.Id == id) //throw new Exception("Você está tentando atualizar o produto errado.");
 
             _context.Update(product);
             if(_context.SaveChanges() > 0 )
             return _context.Products.FirstOrDefault(pr => pr.Id == id);
             else
                 return new Product();
+                
         }
 
         [HttpDelete("{id}")]

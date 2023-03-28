@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\TEOAG.Data",
+    "\\src\\TEOAG.Domain",
+    "\\src\\TEOAG.Domain\\Interfaces",
+    "\\src\\TEOAG.Domain\\Interfaces\\Services",
+    "\\src\\TEOAG.Domain\\Services"
+  ],
+  "SelectedNode": "\\src\\TEOAG.Domain\\Interfaces\\Services\\IProductService.cs",
+  "PreviewInSolutionExplorer": false
+}

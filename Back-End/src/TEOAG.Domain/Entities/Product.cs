@@ -19,10 +19,10 @@ namespace TEOAG.Domain.Entities
         public Status Status { get; set; }
 
         [JsonPropertyName("Manufacturing Date")]
-        public DateTime ManufacturingDate { get; set; }
+        public DateTime? ManufacturingDate { get; set; }
 
         [JsonPropertyName("Expiration Date")]
-        public DateTime ExpirationDate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
 
         [JsonPropertyName("Supplier Code")]
         public int SupplierId { get; set; }
@@ -33,7 +33,11 @@ namespace TEOAG.Domain.Entities
         [JsonPropertyName("CNPJ Supplier")]
         public string CNPJSupplier { get; set; }
 
-        public Product() => ManufacturingDate = DateTime.Now;
+        public Product()
+        {
+            ManufacturingDate = DateTime.Now;
+            ExpirationDate = null;
+        } 
 
         public Product(int id, string productName, string supplierDescription) : this()
 
@@ -48,7 +52,7 @@ namespace TEOAG.Domain.Entities
             if(ManufacturingDate == null)
             ManufacturingDate = DateTime.Now;
             else
-                throw new Exception($"Product já incluso em: {ManufacturingDate.ToString("dd/MM/yyyy hh:mm")}");
+                throw new Exception($"Product já incluso em: {ManufacturingDate?.ToString("dd/MM/yyyy hh:mm")}");
         }
     }
 }
