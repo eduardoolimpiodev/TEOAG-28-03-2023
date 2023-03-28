@@ -8,5 +8,6 @@ namespace TEOAG.Domain.Interfaces.Repositories
          Task<Product[]> PegaTodasAsync();
          Task<Product> PegaPorIdAsync(int id);
          Task<Product> PegaPorTituloAsync(string productName);
+        
     }
 }

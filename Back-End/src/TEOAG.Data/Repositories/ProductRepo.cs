@@ -18,6 +18,7 @@ namespace TEOAG.Data.Repositories
             _context = context;
 
         }
+
         public async Task<Product> PegaPorIdAsync(int id)
         {
             IQueryable<Product> query = _context.Products;
@@ -51,6 +52,6 @@ namespace TEOAG.Data.Repositories
 
             return await query.ToArrayAsync();
         }
-
     }
+
 }

@@ -64,15 +64,7 @@
               "target": "Package",
               "version": "[5.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.10, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "target": "Package",
-              "version": "[5.0.10, )"
-            },
-            "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"
             },
@@ -157,10 +149,6 @@
               "version": "[5.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqLite": {
-              "target": "Package",
-              "version": "[5.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.10, )"
             },
